@@ -1,0 +1,12 @@
+on: [push]
+
+jobs:
+  info:
+    runs-on: self-hosted
+    name: Plastic Config Test
+    steps:
+    - name: plastic config action step
+      uses: TelltaleGames/plastic-config-action@main
+
+    - name: Plastic Repo List
+      run: cm repo list
