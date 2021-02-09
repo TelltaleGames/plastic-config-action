@@ -1,5 +1,11 @@
 name: 'PlasticConfig'
 description: 'Installs plastic client.config on machine.'
+inputs:
+  client_conf:
+    description: "Plastic client.conf contents."
+    required: true
+
 runs:
   using: 'node12'
   main: 'build/index.js'
+  post: 'build/index.js'
