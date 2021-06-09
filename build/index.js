@@ -5796,6 +5796,7 @@ const conf_name = "client.conf";
 const conf_path = path.join(plastic_root, conf_name);
 
 async function install_config(client_conf) {
+    await fs.promises.mkdir(plastic_root, {recursive: true});
     await fs.promises.writeFile(conf_path, client_conf);
 }
 
